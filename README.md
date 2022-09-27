@@ -1,29 +1,35 @@
 # tedious-view-7935
 
-#### The main aim of this system is to maintain and manage the detail information of the crime happened in  an  area under a particular police station. The idea of this sowftware is that this software may be used by the police officials in the Police station.
+#### The main aim of this system is to maintain and manage detailed information on the crime that happened in an area under a particular police station. This software may be used by the police officers in the Police station.
 
-Following information are stored in this software:-
+The following pieces of information are stored in this software:-
         
         1. Date and Place of the Crime.
-        2. Description of the crime i.e Robbery or Theft or Homicide etc.
+        2. Description of the crime i.e Robbery or Theft, Homicide etc.
         3. Victims.
-        4. Detail description of the crime that is in case of Robbery, the wealth that was stolen or in case of Homicide, the person(s) killed etc.
-        5. The names of the main suspected.
+        4. Detail description of the crime in case of Robbery, stolen wealth or case of Homicide, 
+        the person(s) killed etc.
+        5. The names of the main suspects.
         
         
-#### The information about the criminal is also maintained in this sowftware. These information are shown in this sowtware:-
+#### The information about the criminal is also maintained in this software.
+
+This information is shown in this software:-
 
         1. Name of the Criminal.
         2. Age and Gender.
         3. Address.
-        4. Identifying mark in the face.
+        4. Identifying marks on the face.
         5. Area of the crime from where the criminal was first arrested.
         6. Attached to which crime.
 
-Searching facility for criminals and crimes is also available in this software. The status (solved or not solved) of each crime is also  maintained in this software. After solving the crime, the status will be changed. 
 
-#### The software also display the crimes and criminals area wise or police station wise. The Software produce report for:-
+A searching facility for criminals and crimes is also available in this software. This software maintains each crime's status (solved or not solved). After solving the crime, the status will be changed. 
 
-A. Number of solved and unsolved crime.
-B. Number of crimes recorded in the current month.
+#### The software also displays the crimes and criminals area-wise or police station-wise.
+
+The software produce report for:-
+
+        A. Number of solved and unsolved crimes.
+        B. Number of crimes recorded in the current month.
 
