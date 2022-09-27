@@ -7,8 +7,7 @@ The following pieces of information are stored in this software:-
         1. Date and Place of the Crime.
         2. Description of the crime i.e Robbery or Theft, Homicide etc.
         3. Victims.
-        4. Detail description of the crime in case of Robbery, stolen wealth or case of Homicide, 
-        the person(s) killed etc.
+        4. Detail description of the crime in case of Robbery, stolen wealth or case of Homicide, the person killed etc.
         5. The names of the main suspects.
         
         
