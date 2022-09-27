@@ -1,4 +1,4 @@
-# tedious-view-7935
+# Crime Information Management System
 
 #### The main aim of this system is to maintain and manage detailed information on the crime that happened in an area under a particular police station. This software may be used by the police officers in the Police station.
 
