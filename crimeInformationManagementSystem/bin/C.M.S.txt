@@ -1,0 +1,92 @@
+
+**This table is created for all the types of crime **,
+
+create table crime(
+crime_id int primary key auto_increment,
+crime_name varchar(20) not null
+);
+
+
+
+**This is for police department **
+
+create table police_dept(
+dept_name varchar(20) primary key
+);
+
+
+
+
+**This table is created for storing all the criminals in the area**,
+
+create table criminal(
+criminal_id int primary key auto_increment,
+criminal_name varchar(20) not null,
+criminal_age int not null,
+criminal_gender varchar(1) not null,
+criminal_address varchar(30) not null,
+identity_mark varchar(30) not null
+);
+
+
+
+**This table is created for finding any fIR related to crime it will be marked with criminalid and crimeid **
+
+create table crime_criminal(
+cc_id int primary key auto_increment,
+crime_id int,
+criminal_id int,
+crime_date date not null,
+crime_place varchar(30) not null,
+victims varchar(40) not null,
+suspect varchar(20),
+status varchar(10) not null,
+crime_desc varchar(100) not null,
+foreign key (criminal_id) references criminal(criminal_id),
+foreign key (crime_id) references crime(crime_id),
+foreign key (crime_place) references police_dept(dept_name)
+);
+
+
+
+
+**insert into crime**
+insert into crime (crime_name) values('robbing');
+insert into crime (crime_name) values('murder');
+insert into crime (crime_name) values('rape');
+
+
+**insert into police_dept**
+insert into police_dept values('delhi');
+insert into police_dept values('banglore');
+insert into police_dept values('kolkata');
+
+
+
+**insert into criminal**
+insert into criminal (criminal_name,criminal_age,criminal_gender,criminal_address,identity_mark) values('Ramesh',28,'M','delhi','blackdot');
+insert into criminal (criminal_name,criminal_age,criminal_gender,criminal_address,identity_mark) values('Rahul',38,'M','banglore','dotOnforehead');
+
+
+
+**insert into crime_criminal **
+insert into crime_criminal (crime_id,criminal_id,crime_date,crime_place,victims,suspect,status,crime_desc) values(1,1,'2022-08-27','delhi','raj, rajesh',null,'not solved','200000 are theft from house');
+insert into crime_criminal (crime_id,criminal_id,crime_date,crime_place,victims,suspect,status,crime_desc) values(2,null,'2022-08-28','kolkata','rajiv','ramesh','not solved','murdered at morning');
+insert into crime_criminal (crime_id,criminal_id,crime_date,crime_place,victims,suspect,status,crime_desc) values(3,2,'2022-08-28','banglore','rani','ram, rajesh','not solved','raped');
+
+
+
+
+
+
+
+
+
+select d.dept_name,cc.crime_date,c1.crime_name,cc.victims,cc.suspect,cc.crime_desc from crime c1 inner join crime_criminal cc inner join police_dept d on cc.crime_id = c1.crime_id and cc.crime_place = d.dept_name and cc.status = 'not solved';
+
+
+
+
+
+
+select d.dept_name,cc.crime_date,c2.criminal_name,c1.crime_name,cc.victims,cc.suspect,cc.crime_desc from crime c1 inner join criminal c2 inner join crime_criminal cc inner join police_dept d on cc.crime_id = c1.crime_id and (cc.criminal_id = c2.criminal_id or cc.criminal_id is null)and cc.crime_place = d.dept_name;
