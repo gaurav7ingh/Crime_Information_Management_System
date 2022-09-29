@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Utility {
+public class Util {
 	
 	public static Connection getConnection() {
 		Connection conn = null;
@@ -15,7 +15,7 @@ public class Utility {
 			e.printStackTrace();
 		}
 		
-		String url = "jdbc:mysql://localhost:3306/crimedb";
+		String url = "jdbc:mysql://localhost:3306/checking";
 		
 		try {
 			conn = DriverManager.getConnection(url,"root", "root");
