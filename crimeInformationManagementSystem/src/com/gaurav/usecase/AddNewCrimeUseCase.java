@@ -1,10 +1,10 @@
 package com.gaurav.usecase;
 
 import java.util.Scanner;
-
 import com.gaurav.bean.Crime;
 import com.gaurav.dao.CrimeDao;
 import com.gaurav.dao.CrimeDaoImpl;
+import java.sql.Date;
 
 public class AddNewCrimeUseCase {
 
@@ -20,8 +20,8 @@ public class AddNewCrimeUseCase {
 
 		System.out.println("Enter the date of crime");
 		System.out.println("in this format 'yyyy-mm-dd' ");
-		String dateOfCrime = sc.nextLine();
-
+		Date dateOfCrime = Date.valueOf(sc.nextLine()); 
+		
 		System.out.println("Enter the address of crime");
 		String PlaceOfCrime = sc.nextLine();
 
