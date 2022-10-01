@@ -1,27 +1,35 @@
 package com.gaurav.usecase;
 
-import java.util.Scanner;
 import com.gaurav.bean.Crime;
 import com.gaurav.dao.CrimeDao;
 import com.gaurav.dao.CrimeDaoImpl;
 import java.sql.Date;
+import java.util.Scanner;
 
-public class AddNewCrimeUseCase {
+public class AddCrime {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public void main(Scanner sc) {
 
 		System.out.println("Enter the name of Crime");
 		String name = sc.next();
 
-		System.out.println("Enter the id of Criminal or in case you don't know the Criminal enter 0");
 		sc.nextLine();
+		System.out.println("Enter the id of Criminal");
+		System.out.println("If you don't know the who is the Criminal enter -1");
 		int id = Integer.parseInt(sc.nextLine());
+		boolean flag = true;
+		Date dateOfCrime = null;
+		while (flag) {
+			System.out.println("Enter the date of crime");
+			System.out.println("in this format 'yyyy-mm-dd' ");
+			try {
+				dateOfCrime = Date.valueOf(sc.nextLine());
+				flag = false;
+			} catch (IllegalArgumentException e) {
+				
+			}
+		}
 
-		System.out.println("Enter the date of crime");
-		System.out.println("in this format 'yyyy-mm-dd' ");
-		Date dateOfCrime = Date.valueOf(sc.nextLine()); 
-		
 		System.out.println("Enter the address of crime");
 		String PlaceOfCrime = sc.nextLine();
 
@@ -30,20 +38,20 @@ public class AddNewCrimeUseCase {
 
 		System.out.println("Enter who are the suspects of this crime");
 		String suspect = sc.nextLine();
-		
+
 		System.out.println("Enter the status of case 'solved/not solved'");
 		String statusOfCrime = sc.nextLine();
-		
+
 		System.out.println("Enter the detailed description of this crime");
 		String desc = sc.nextLine();
-		
+
 		Crime crime = new Crime(name, id, dateOfCrime, PlaceOfCrime, victims, suspect, statusOfCrime, desc);
-		
+
 		CrimeDao crimeDao = new CrimeDaoImpl();
 		String str = crimeDao.addNewCrime(crime);
 		System.out.println(str);
 
-		sc.close();
 	}
+
 
 }

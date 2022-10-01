@@ -6,9 +6,9 @@ import com.gaurav.bean.Criminal;
 import com.gaurav.dao.CrimeDao;
 import com.gaurav.dao.CrimeDaoImpl;
 
-public class AddCriminalUseCase {
+public class AddCriminal {
 	
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter the name of Criminal");
@@ -43,7 +43,6 @@ public class AddCriminalUseCase {
 		String str = crimeDao.addCriminal(criminal);
 		System.out.println(str);
 		
-		sc.close();
 	}
 	
 }

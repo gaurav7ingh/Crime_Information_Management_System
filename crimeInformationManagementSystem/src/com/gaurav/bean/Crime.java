@@ -114,8 +114,8 @@ public class Crime {
 
 	@Override
 	public String toString() {
-		if (CriminalId != 0) {
-			return "======================================================================"
+		if (CriminalId != -1) {
+			return "==================================================="
 					+"\n Case Id \t\t\t = \t"+case_no
 					+"\n Status \t\t\t = \t"+status
 					+"\n Crime \t\t\t = \t"+crimeName
@@ -125,11 +125,11 @@ public class Crime {
 					+"\n Place Of Crime \t = \t"+placeOfCrime
 					+"\n Victims \t\t\t = \t"+victims
 					+"\n Crime Description \t = \t"+CrimeDesc
-					+"\n======================================================================"
-					+"\n\n";
+					+"\n==================================================="
+					+"\n";
 					
 		}
-		return 	"======================================================================"
+		return 	"==================================================="
 				+"\n Case Id \t\t\t = \t"+case_no
 				+"\n Status \t\t\t = \t"+status
 				+"\n Crime \t\t\t = \t"+crimeName
@@ -139,7 +139,7 @@ public class Crime {
 				+"\n Place Of Crime \t = \t"+placeOfCrime
 				+"\n Victims \t\t\t = \t"+victims
 				+"\n Crime Description \t = \t"+CrimeDesc
-				+"\n======================================================================"
-				+"\n\n";
+				+"\n==================================================="
+				+"\n";
 	}
 }

@@ -15,7 +15,7 @@ public class Util {
 			e.printStackTrace();
 		}
 		
-		String url = "jdbc:mysql://localhost:3306/checking";
+		String url = "jdbc:mysql://localhost:3306/crimedb";
 		
 		try {
 			conn = DriverManager.getConnection(url,"root", "root");
