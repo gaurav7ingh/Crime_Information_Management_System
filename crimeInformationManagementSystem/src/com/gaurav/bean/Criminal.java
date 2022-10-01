@@ -61,10 +61,19 @@ public class Criminal {
 		this.arrestAddress = arrestAddress;
 		this.identityMark = identityMark;
 	}
+	
 	@Override
 	public String toString() {
-		return "Criminal [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + ", address=" + address
-				+ ", arrestAddress=" + arrestAddress + ", identityMark=" + identityMark + "]";
+		return "==================================================="
+				+"\n Id \t\t\t\t = \t"+id
+				+"\n Name \t\t\t = \t"+name
+				+"\n Age \t\t\t\t = \t"+age
+				+"\n Gender Id \t\t = \t"+gender
+				+"\n Address \t\t\t = \t"+address
+				+"\n Arrestin Address \t = \t"+arrestAddress
+				+"\n Identity Mark \t\t = \t"+identityMark
+				+"\n==================================================="
+				+"\n";
 	}
 	
 	

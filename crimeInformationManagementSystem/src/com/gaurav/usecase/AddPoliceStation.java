@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.gaurav.dao.CrimeDao;
 import com.gaurav.dao.CrimeDaoImpl;
 
-public class AddNewPoliceStationUseCase {
+public class AddPoliceStation {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class AddNewPoliceStationUseCase {
 		String result = dao.addPoliceStation(stationName);
 		
 		System.out.println(result);
-		sc.close();
+		
 	}
 	
 }

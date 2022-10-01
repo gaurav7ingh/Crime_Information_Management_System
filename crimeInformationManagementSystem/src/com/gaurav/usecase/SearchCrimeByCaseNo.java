@@ -1,24 +1,31 @@
 package com.gaurav.usecase;
 
-import java.util.List;
 import com.gaurav.bean.Crime;
 import com.gaurav.bean.User;
 import com.gaurav.dao.CrimeDao;
 import com.gaurav.dao.CrimeDaoImpl;
 import com.gaurav.exceptions.CrimeException;
 
-public class FindSolvedCaseUseCase {
-	
-	public FindSolvedCaseUseCase(User user) {
+public class SearchCrimeByCaseNo {
+	private Crime crime;
+	private String msg;
+	public SearchCrimeByCaseNo(User user,int id) {
 		
 		CrimeDao dao = new CrimeDaoImpl();
 		
 		try {
-		 	List<Crime> list = dao.findSolvedCase(user);
-		 	System.out.println("Solved Cases = "+list.size());
+		 	crime = dao.serchCrimeById(user, id);
+		 	
 		} catch (CrimeException e) {
-			System.out.println(e.getMessage());
+			msg = (e.getMessage());
 		}
+	}
+	public Crime getCrime() {
+		return crime;
+	}
+	
+	public String getMsg() {
+		return msg;
 	}
 	
 }
