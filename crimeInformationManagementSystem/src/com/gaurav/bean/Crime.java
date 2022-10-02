@@ -115,12 +115,12 @@ public class Crime {
 	@Override
 	public String toString() {
 		if (CriminalId != -1) {
-			return "==================================================="
+			return "Crime"+"\n==================================================="
 					+"\n Case Id \t\t\t = \t"+case_no
 					+"\n Status \t\t\t = \t"+status
 					+"\n Crime \t\t\t = \t"+crimeName
 					+"\n Criminal Id \t\t = \t"+CriminalId
-					+"\n Suspects \t\t = \t"+suspect
+					+"\n Suspects \t\t\t = \t"+suspect
 					+"\n Date Of Crime \t\t = \t"+dateOfCrime
 					+"\n Place Of Crime \t = \t"+placeOfCrime
 					+"\n Victims \t\t\t = \t"+victims
@@ -129,12 +129,12 @@ public class Crime {
 					+"\n";
 					
 		}
-		return 	"==================================================="
+		return 	"Crime"+"\n==================================================="
 				+"\n Case Id \t\t\t = \t"+case_no
 				+"\n Status \t\t\t = \t"+status
 				+"\n Crime \t\t\t = \t"+crimeName
 				+"\n Criminal Id \t\t = \tCriminal not found yet "
-				+"\n Suspects \t\t = \t"+suspect
+				+"\n Suspects \t\t\t = \t"+suspect
 				+"\n Date Of Crime \t\t = \t"+dateOfCrime
 				+"\n Place Of Crime \t = \t"+placeOfCrime
 				+"\n Victims \t\t\t = \t"+victims

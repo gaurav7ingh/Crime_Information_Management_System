@@ -110,7 +110,9 @@ public class Main {
 
 					case 4: {
 						List<Crime> crimes = fsc.getSolvedCasesList();
-						crimes.forEach(s -> System.out.println(s));
+						if(fsc.getSize()==-1) System.out.println(fsc.getMsg());
+						else
+							crimes.forEach(s -> System.out.println(s));
 						break;
 					}
 
@@ -118,9 +120,10 @@ public class Main {
 						List<Crime> unsolvedCrime = fuc.getUnsolvedCasesList();
 						List<Crime> sovedCrime = fsc.getSolvedCasesList();
 						List<Crime> allCrime = new ArrayList<>();
-						allCrime.addAll(unsolvedCrime);
-						allCrime.addAll(sovedCrime);
-						allCrime.forEach(s -> System.out.println(s));
+						if(unsolvedCrime!=null && !unsolvedCrime.isEmpty()) allCrime.addAll(unsolvedCrime);
+						if(sovedCrime!=null && !sovedCrime.isEmpty()) allCrime.addAll(sovedCrime);
+						if(!allCrime.isEmpty())allCrime.forEach(s -> System.out.println(s));
+						else System.out.println("No Cases is added till now.");
 						break;
 
 					case 6:

@@ -64,7 +64,7 @@ public class Criminal {
 	
 	@Override
 	public String toString() {
-		return "==================================================="
+		return "Criminal"+"\n==================================================="
 				+"\n Id \t\t\t\t = \t"+id
 				+"\n Name \t\t\t = \t"+name
 				+"\n Age \t\t\t\t = \t"+age
