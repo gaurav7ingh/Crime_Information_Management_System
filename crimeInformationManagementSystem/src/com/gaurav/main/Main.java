@@ -2,13 +2,9 @@ package com.gaurav.main;
 
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-
-import javax.swing.text.html.parser.Element;
-
 import com.gaurav.app.UserInterface;
 import com.gaurav.bean.Crime;
 import com.gaurav.bean.Criminal;
@@ -105,7 +101,9 @@ public class Main {
 
 					case 3:
 						List<Crime> unsolvedCrimes = fuc.getUnsolvedCasesList();
-						unsolvedCrimes.forEach(s -> System.out.println(s));
+						if(fuc.getSize()==-1) System.out.println(fuc.getMsg());
+						else
+							unsolvedCrimes.forEach(s -> System.out.println(s));
 						break;
 
 					case 4: {

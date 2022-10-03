@@ -38,4 +38,6 @@ public interface CrimeDao {
 	public List<Crime> searchCrimesOfCriminal(int id) throws CrimeException;
 	
 	public List<Crime> searchCrimeByDate(User user,Date date) throws CrimeException;
+	
+	
 }
