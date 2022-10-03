@@ -522,4 +522,6 @@ public class CrimeDaoImpl implements CrimeDao {
 		return crimes;
 	}
 
+	
+
 }
