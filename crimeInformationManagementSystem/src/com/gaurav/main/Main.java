@@ -28,6 +28,10 @@ import com.gaurav.usecase.UpdateCrimeStatus;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		System.out.println("===========================================================================");
+		System.out.println("Crime Information Management System");
+
 		CrimeDao dao = new CrimeDaoImpl();
 
 		Scanner sc = new Scanner(System.in);
@@ -47,7 +51,6 @@ public class Main {
 		if (user != null) {
 
 			boolean flag = true;
-
 			System.out.println("===========================================================================");
 			UserInterface.userInterface(user);
 
