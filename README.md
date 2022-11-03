@@ -33,3 +33,11 @@ The software produce report for:-
         A. Number of solved and unsolved crimes.
         B. Number of crimes recorded in the current month.
 
+
+
+
+#### For better understating you can checkout this video.
+
+https://drive.google.com/file/d/12BbeQDwfdy2fiQ7IljrWwyrvfWif724P/view?usp=sharing
+
+## Thanks for visiting.
